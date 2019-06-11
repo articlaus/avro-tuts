@@ -59,7 +59,7 @@ public class KafkaService {
         try {
             ByteArrayInputStream bais = new ByteArrayInputStream(data);
             ReflectDatumReader<PersonModel> reader = new ReflectDatumReader(PersonModel.class);
-            PersonModel model = reader.read(null, DecoderFactory.get().binaryDecoder(bais, null));
+                PersonModel model = reader.read(null, DecoderFactory.get().binaryDecoder(bais, null));
         } catch (Exception ex) {
             log.error(ex);
         }

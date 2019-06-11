@@ -70,6 +70,7 @@ public class KafkaStream {
             userWriter.write(model, encoder);
             encoder.flush();
             baos.close();
+
             return baos.toByteArray();
         } catch (Exception ex) {
             log.error(ex);
